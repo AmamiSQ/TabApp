@@ -1,0 +1,36 @@
+<resources>
+    <!-- SENTENCES -->
+    <string name="test">hello world</string>
+    <string name="sen1">The quick brown fox jumped over the lazy dog</string>
+    <string name="sen2">Ohana means family</string>
+    <string name="sen3">Het meisje ging lopend naar school toe</string>
+    <string name="sen4">De snelle bruine vos sprong over de luie hond</string>
+    <string name="sen5">Persona is een geweldige game</string>
+    <string name="sen6">De juf las een verhaaltje voor de klas</string>
+    <string name="sen7">De jongen moest naar de winkel van zijn moeder</string>
+    <string name="sen8">Mijn favoriete dier is een dolfijn</string>
+    <string name="sen9">Studeer nooit HBO Informatica</string>
+    <string name="sen10">Binnenkort gaan de tentamens van start</string>
+
+    <!-- WORDS -->
+    <string name="wrd1">Copy</string>
+    <string name="wrd2">This</string>
+    <string name="wrd3">Word</string>
+    <string name="wrd4">Handschrift</string>
+    <string name="wrd5">Jongen</string>
+    <string name="wrd6">Meisje</string>
+    <string name="wrd7">Hond</string>
+    <string name="wrd8">Kat</string>
+    <string name="wrd9">Huisdier</string>
+    <string name="wrd10">Hamster</string>
+    <string name="wrd11">Citroen</string>
+    <string name="wrd12">Fruit</string>
+    <string name="wrd13">Maandag</string>
+    <string name="wrd14">Dinsdag</string>
+    <string name="wrd15">Woensdag</string>
+    <string name="wrd16">Donderdag</string>
+    <string name="wrd17">Vrijdag</string>
+    <string name="wrd18">Zaterdag</string>
+    <string name="wrd19">Zondag</string>
+    <string name="wrd20">Weekend</string>
+</resources>
