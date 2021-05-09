@@ -8,8 +8,9 @@
     <string name="next">Alfabet oefenen</string>
     <string name="secondnext">Zinnen oefenen</string>
     <string name="previous">Previous</string>
-    <string name="first_choice">alfabet oefenen</string>
-    <string name="second_choice">zinnen oefenen</string>
+    <string name="first_choice">Alfabet oefenen</string>
+    <string name="second_choice">Zinnen oefenen</string>
+    <string name="fourth_choice">Woorden oefenen</string>
     <string name="third_choice">Volgende</string>
 
     <string name="hello_first_fragment">Welkom(gebruikersnaam)</string>
@@ -26,5 +27,6 @@
     <string name="todo5">TODO</string>
     <string name="todo6">TODO</string>
     <string name="todo7">TODO</string>
+
 
 </resources>
