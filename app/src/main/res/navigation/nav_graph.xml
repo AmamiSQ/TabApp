@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_third2"
             app:destination="@id/third" />
+        <action
+            android:id="@+id/action_FirstFragment_to_woorden32"
+            app:destination="@id/woorden32" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -33,4 +36,9 @@
         android:name="com.example.myapplication.third"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/woorden32"
+        android:name="com.example.myapplication.woorden3"
+        android:label="fragment_woorden"
+        tools:layout="@layout/fragment_woorden" />
 </navigation>
