@@ -13,11 +13,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import org.json.JSONArray;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
     @Override
@@ -59,4 +62,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

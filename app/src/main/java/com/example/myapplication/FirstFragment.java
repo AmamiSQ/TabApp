@@ -9,6 +9,15 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.json.JSONArray;
+
 public class FirstFragment extends Fragment {
 
     @Override
@@ -45,4 +54,43 @@ public class FirstFragment extends Fragment {
             }
         });
     }
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getActivity().getAssets().open("NewEx.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+
+        try {
+            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            JSONArray m_jArry = obj.getJSONArray("sentences");
+            ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
+            HashMap<String, String> m_li;
+
+            for (int i = 0; i < m_jArry.length(); i++) {
+                JSONObject jo_inside = m_jArry.getJSONObject(i);
+                Log.d("Details-->", jo_inside.getString("sentences"));
+                String formula_value = jo_inside.getString("sentences");
+                String url_value = jo_inside.getString("url");
+
+                //Add your values in your `ArrayList` as below:
+                m_li = new HashMap<String, String>();
+                m_li.put("sentences", formula_value);
+                m_li.put("url", url_value);
+
+                formList.add(m_li);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
