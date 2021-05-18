@@ -13,8 +13,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.lang.reflect.Array;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,6 +59,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    //String JSON = NewEx.sentences[0]
 }
