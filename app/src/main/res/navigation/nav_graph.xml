@@ -18,8 +18,8 @@
             android:id="@+id/action_FirstFragment_to_third2"
             app:destination="@id/third" />
         <action
-            android:id="@+id/action_FirstFragment_to_GameFragment"
-            app:destination="@id/GameFragment" />
+            android:id="@+id/action_FirstFragment_to_GameActivity"
+            app:destination="@id/GameActivity" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -37,8 +37,9 @@
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
     <fragment
-        android:id="@+id/GameFragment"
-        android:name="com.example.myapplication.GameFragment"
-        android:label="GameFragment"
-        tools:layout="@layout/fragment_game" />
+        android:id="@+id/GameActivity"
+        android:name="com.example.myapplication.GameActivity"
+        android:label="GameActivity"
+        tools:layout="@layout/content_game" />
+
 </navigation>
