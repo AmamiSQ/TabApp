@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_third2"
             app:destination="@id/third" />
+        <action
+            android:id="@+id/action_FirstFragment_to_GameFragment"
+            app:destination="@id/GameFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -33,4 +36,9 @@
         android:name="com.example.myapplication.third"
         android:label="fragment_third"
         tools:layout="@layout/fragment_third" />
+    <fragment
+        android:id="@+id/GameFragment"
+        android:name="com.example.myapplication.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game" />
 </navigation>

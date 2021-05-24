@@ -27,6 +27,10 @@
     <string name="todo5">TODO</string>
     <string name="todo6">TODO</string>
     <string name="todo7">TODO</string>
+    <string name="game">Game</string>
+    <string name="text_to_change">This will change</string>
+    <string name="change_text">Click to change text</string>
+
 
 
 </resources>
