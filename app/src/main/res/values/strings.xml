@@ -32,7 +32,8 @@
     <string name="change_text">Click to change text</string>
     <string name="title_activity_game">GameActivity</string>
     <string name="button_game">Button</string>
-
+    <string name="title_activity_zinnen">ZinnenActivity</string>
+    <string name="button">Button</string>
 
 
 </resources>
