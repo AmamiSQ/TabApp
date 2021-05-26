@@ -18,7 +18,7 @@ public class mainmenuactivity extends AppCompatActivity {
     private Button ealfabet;
     private Button ezinnen;
     private Button ewoorden;
-    /* private Button egame; */
+    private Button egame;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class mainmenuactivity extends AppCompatActivity {
         ealfabet = findViewById(R.id.button_first);
         ezinnen = findViewById(R.id.button);
         ewoorden = findViewById(R.id.button_fourth);
-        //ealfabet = findViewById(R.id.button_first);
+        egame = findViewById(R.id.button_game);
         setSupportActionBar(toolbar);
 
         ealfabet.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +57,12 @@ public class mainmenuactivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(mainmenuactivity.this, woordenactivity.class));
+            }
+        });
+        egame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mainmenuactivity.this, GameActivity.class));
             }
         });
     }

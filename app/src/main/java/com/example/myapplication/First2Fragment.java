@@ -44,5 +44,12 @@ public class First2Fragment extends Fragment {
                         .navigate(R.id.action_First2Fragment_to_woorden32);
             }
         });
+        view.findViewById(R.id.button_game).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                NavHostFragment.findNavController(First2Fragment.this)
+                        .navigate(R.id.action_First2Fragment_to_game);
+            }
+        });
     }
 }

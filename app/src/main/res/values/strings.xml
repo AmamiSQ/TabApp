@@ -44,4 +44,7 @@
     <string name="title_activity_alfabetactivity">alfabetactivity</string>
     <string name="title_activity_zinnenactivity">zinnenactivity</string>
     <string name="title_activity_woordenactivity">woordenactivity</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="text_to_change">text_to_change</string>
+    <string name="change_text">change_text</string>
 </resources>

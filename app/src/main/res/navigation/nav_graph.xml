@@ -30,6 +30,11 @@
         android:label="fragment_woorden"
         tools:layout="@layout/fragment_woorden" />
     <fragment
+        android:id="@+id/game"
+        android:name="com.example.myapplication.GameActivity"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game" />
+    <fragment
         android:id="@+id/First2Fragment"
         android:name="com.example.myapplication.First2Fragment"
         android:label="@string/first_fragment_label"
@@ -43,5 +48,8 @@
         <action
             android:id="@+id/action_First2Fragment_to_woorden32"
             app:destination="@id/woorden32" />
+        <action
+            android:id="@+id/action_First2Fragment_to_game"
+            app:destination="@id/game" />
     </fragment>
 </navigation>
