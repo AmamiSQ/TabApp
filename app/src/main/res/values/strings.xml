@@ -41,4 +41,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="inlog_kansen">Inlog kansen:</string>
     <string name="title_activity_mainmenuactivity">mainmenuactivity</string>
+    <string name="title_activity_alfabetactivity">alfabetactivity</string>
+    <string name="title_activity_zinnenactivity">zinnenactivity</string>
+    <string name="title_activity_woordenactivity">woordenactivity</string>
 </resources>

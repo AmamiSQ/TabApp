@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -9,8 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
+import android.widget.Button;
 
 public class mainmenuactivity extends AppCompatActivity {
+
+
+    private Button ealfabet;
+    private Button ezinnen;
+    private Button ewoorden;
+    /* private Button egame; */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +26,17 @@ public class mainmenuactivity extends AppCompatActivity {
         setContentView(R.layout.fragment_first2);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        ealfabet = findViewById(R.id.button_first);
+        ezinnen = findViewById(R.id.button);
+        ewoorden = findViewById(R.id.button_fourth);
+        //ealfabet = findViewById(R.id.button_first);
+        setSupportActionBar(toolbar);
 
+        ealfabet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mainmenuactivity.this, alfabetactivity.class));
+            }
         /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,5 +45,19 @@ public class mainmenuactivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         }); */
+
+        });
+        ezinnen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mainmenuactivity.this, zinnenactivity.class));
+            }
+        });
+        ewoorden.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(mainmenuactivity.this, woordenactivity.class));
+            }
+        });
     }
 }
