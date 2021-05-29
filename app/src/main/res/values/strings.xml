@@ -53,4 +53,6 @@
     <string name="start">Start</string>
     <string name="score">Score:</string>
     <string name="todo22">TODO</string>
+    <string name="levens">Levens:</string>
+    <string name="_3">3</string>
 </resources>
