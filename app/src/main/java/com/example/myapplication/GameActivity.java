@@ -15,11 +15,15 @@ import android.widget.TextView;
 public class GameActivity extends AppCompatActivity {
 
     int oldValue;
+    TextView scoreValue;
+    int score = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_game);
 
+        scoreValue = (TextView) findViewById(R.id.scoreValue);
         changeTextViewValueRandomlyOnButtonClick();
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -42,6 +46,9 @@ public class GameActivity extends AppCompatActivity {
                 }
                 changingText.setText(manyDifferentStrings[random]);
                 oldValue = random;
+
+                score++;
+                scoreValue.setText(Integer.toString(score));
             }
         });
     }
