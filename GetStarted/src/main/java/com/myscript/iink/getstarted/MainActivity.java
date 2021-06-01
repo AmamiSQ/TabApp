@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     findViewById(R.id.button_input_mode_forcePen).setOnClickListener(this);
     findViewById(R.id.button_input_mode_forceTouch).setOnClickListener(this);
-    //findViewById(R.id.button_input_mode_auto).setOnClickListener(this);
+    findViewById(R.id.button_input_mode_auto).setOnClickListener(this);
     findViewById(R.id.button_undo).setOnClickListener(this);
     findViewById(R.id.button_redo).setOnClickListener(this);
     findViewById(R.id.button_clear).setOnClickListener(this);

@@ -150,8 +150,8 @@ public class EditorView extends FrameLayout implements IRenderTarget2
     Configuration conf = editor.getConfiguration();
     float verticalMarginPX = getResources().getDimension(R.dimen.vertical_margin);
     float horizontalMarginPX = getResources().getDimension(R.dimen.horizontal_margin);
-    float verticalMarginMM = 25.4f * verticalMarginPX / displayMetrics.ydpi / 2;
-    float horizontalMarginMM = 25.4f * horizontalMarginPX / displayMetrics.xdpi / 2;
+    float verticalMarginMM = 25.4f * verticalMarginPX / displayMetrics.ydpi;
+    float horizontalMarginMM = 25.4f * horizontalMarginPX / displayMetrics.xdpi;
     conf.setNumber("text.margin.top", verticalMarginMM);
     conf.setNumber("text.margin.left", horizontalMarginMM);
     conf.setNumber("text.margin.right", horizontalMarginMM);
