@@ -33,7 +33,14 @@ public class woordenactivity extends AppCompatActivity {
         });*/
     }
     private void changeTextViewValueRandomlyOnButtonClick() {
-        final String[] manyDifferentStrings = {"Hoi", "Dit was heel veel werk", "RIP", "Test"};
+        final String[] manyDifferentStrings = {"Copy", "This", "Word", "Handschrift", "Fruit", "Jongen", "Meisje", "Hamster", "Huisdier",
+                "Hond", "Kat", "Dolfijn", "Moeder", "Vader", "Broer", "Zus", "Oom", "Tante",
+                "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag",
+                "Tour", "De", "France", "Tattoo", "Oog", "Muziek", "Koptelefoon", "Accepteren", "Imago", "Rood",
+                "Paars", "Geel", "Groen", "Oranje", "Zwart", "Wit", "Roze", "Blauw", "Wereld", "Ecosysteem",
+                "Rolverdeling", "Toneel", "School", "Studie", "Test", "Telefoon", "Nummer", "Snapchat", "Facebook",
+                "Discord", "Twitter", "Instagram", "Foto", "Eiffeltoren", "Spanje", "Parijs", "Rusland",
+                "Mondkapje", "Oorbellen", "Armband"};
 
         final TextView changingText = (TextView) findViewById(R.id.textView_word);
         Button changeTextButton = (Button) findViewById(R.id.button_word);

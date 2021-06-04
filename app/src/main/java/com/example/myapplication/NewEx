@@ -1,0 +1,20 @@
+{
+  "sentences": [
+    "hello world", "The quick brown fox jumped over the lazy dog", "Ohana means family",
+    "Het meisje ging lopend naar school toe", "De snelle bruine vos sprong over de luie hond",
+    "Persona is een geweldige game", "De juf las een verhaaltje voor de klas", "De jongen moest naar de winkel van zijn moeder",
+    "Mijn favoriete dier is een dolfijn", "Studeer nooit HBO Informatica", "Binnenkort gaan de tentamens van start",
+    "Tour de France", "Ik luister elke dag naar muziek", "Heb je foto's gemaakt op vakantie?",
+    "De stad was erg druk", "Dit is mijn eerste tattoeage"
+  ],
+  "words": [
+    "Copy", "This", "Word", "Handschrift", "Fruit", "Jongen", "Meisje", "Hamster", "Huisdier",
+    "Hond", "Kat", "Dolfijn", "Moeder", "Vader", "Broer", "Zus", "Oom", "Tante",
+    "Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag",
+    "Tour", "De", "France", "Tattoo", "Oog", "Muziek", "Koptelefoon", "Accepteren", "Imago", "Rood",
+    "Paars", "Geel", "Groen", "Oranje", "Zwart", "Wit", "Roze", "Blauw", "Wereld", "Ecosysteem",
+    "Rolverdeling", "Toneel", "School", "Studie", "Test", "Telefoon", "Nummer", "Snapchat", "Facebook",
+    "Discord", "Twitter", "Instagram", "Foto", "Eiffeltoren", "Spanje", "Parijs", "Rusland",
+    "Mondkapje", "Oorbellen", "Armband"
+  ]
+}

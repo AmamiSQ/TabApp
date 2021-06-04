@@ -33,7 +33,12 @@ public class zinnenactivity extends AppCompatActivity {
         }); */
     }
     private void changeTextViewValueRandomlyOnButtonClick() {
-        final String[] manyDifferentStrings = {"Hoi", "Dit was heel veel werk", "RIP", "Test"};
+        final String[] manyDifferentStrings = {"hello world", "The quick brown fox jumped over the lazy dog", "Ohana means family",
+                "Het meisje ging lopend naar school toe", "De snelle bruine vos sprong over de luie hond",
+                "Persona is een geweldige game", "De juf las een verhaaltje voor de klas", "De jongen moest naar de winkel van zijn moeder",
+                "Mijn favoriete dier is een dolfijn", "Studeer nooit HBO Informatica", "Binnenkort gaan de tentamens van start",
+                "Tour de France", "Ik luister elke dag naar muziek", "Heb je foto's gemaakt op vakantie?",
+                "De stad was erg druk", "Dit is mijn eerste tattoeage"};
 
         final TextView changingText = (TextView) findViewById(R.id.textView_sen);
         Button changeTextButton = (Button) findViewById(R.id.button_sen);

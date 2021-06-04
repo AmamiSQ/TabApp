@@ -18,6 +18,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText eName;
@@ -99,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
 
     private boolean validate(String userName, String userPassword)
@@ -137,4 +146,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
