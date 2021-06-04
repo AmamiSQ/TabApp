@@ -5,7 +5,7 @@
     android:id="@+id/Loginlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/def4239217cf0974f3164a1ea9202ce5"
+    android:background="@drawable/mcflurry"
     tools:context=".LoginFragment">
 
     <!-- TODO: Update blank fragment layout -->
