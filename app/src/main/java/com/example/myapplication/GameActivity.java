@@ -34,6 +34,7 @@ public class GameActivity extends AppCompatActivity {
     private void Game() {
         final String[] manyDifferentStrings = {"Hoi", "Dit was heel veel werk", "RIP", "Test"};
 
+
         final TextView changingText = (TextView) findViewById(R.id.text_to_change);
         Button changeTextButton = (Button) findViewById(R.id.change_text_button);
 
