@@ -35,7 +35,7 @@ public class alfabetactivity extends AppCompatActivity {
     private void changeTextViewValueRandomlyOnButtonClick() {
         final String[] manyDifferentStrings = {"Aa", "Bb", "Cc", "Dd", "Ee", "Ff", "Gg", "Hh",
                 "Ii", "Jj", "Kk", "Ll", "Mm", "Nn", "Oo", "Pp", "Qq", "Rr", "Ss", "Tt", "Uu",
-                "Vv", "Ww", "Xx", "Yy", "Zz"};
+                "Vv", "Ww", "Xx", "Yy", "Zzz"};
 
         final TextView changingText = (TextView) findViewById(R.id.abc_text);
         Button changeTextButton = (Button) findViewById(R.id.button_abc);
