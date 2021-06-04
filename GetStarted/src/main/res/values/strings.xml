@@ -2,7 +2,7 @@
 <resources>
 
     <!-- App name -->
-    <string name="app_name" translatable="false">iink GetStarted</string>
+    <string name="app_name" translatable="false">App-thingy</string>
 
     <string name="menu_inputMode">Input mode</string>
     <string name="menu_undo">Undo</string>

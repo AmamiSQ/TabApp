@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       @Override
       public void partChanging(Editor editor, ContentPart oldPart, ContentPart newPart)
       {
-        // no-op
+        // just need this to make it work
       }
 
       @Override
@@ -128,11 +128,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       }
     });
 
-    findViewById(R.id.button_input_mode_forcePen).setOnClickListener(this);
-    findViewById(R.id.button_input_mode_forceTouch).setOnClickListener(this);
-    findViewById(R.id.button_input_mode_auto).setOnClickListener(this);
-    findViewById(R.id.button_undo).setOnClickListener(this);
-    findViewById(R.id.button_redo).setOnClickListener(this);
+    //findViewById(R.id.button_input_mode_forcePen).setOnClickListener(this);
+    //findViewById(R.id.button_input_mode_forceTouch).setOnClickListener(this);
+    //findViewById(R.id.button_input_mode_auto).setOnClickListener(this);
+    //findViewById(R.id.button_undo).setOnClickListener(this);
+    //findViewById(R.id.button_redo).setOnClickListener(this);
     findViewById(R.id.button_clear).setOnClickListener(this);
 
     invalidateIconButtons();
@@ -198,21 +198,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   {
     switch (v.getId())
     {
-      case R.id.button_input_mode_forcePen:
-        setInputMode(InputController.INPUT_MODE_FORCE_PEN);
-        break;
-      case R.id.button_input_mode_forceTouch:
-        setInputMode(InputController.INPUT_MODE_FORCE_TOUCH);
-        break;
-      case R.id.button_input_mode_auto:
-        setInputMode(InputController.INPUT_MODE_AUTO);
-        break;
-      case R.id.button_undo:
-        editorView.getEditor().undo();
-        break;
-      case R.id.button_redo:
-        editorView.getEditor().redo();
-        break;
+      //case R.id.button_input_mode_forcePen:
+        //setInputMode(InputController.INPUT_MODE_FORCE_PEN);
+        //break;
+      //case R.id.button_input_mode_forceTouch:
+        //setInputMode(InputController.INPUT_MODE_FORCE_TOUCH);
+        //break;
+      //case R.id.button_input_mode_auto:
+        //setInputMode(InputController.INPUT_MODE_AUTO);
+        //break;
+      //case R.id.button_undo:
+        //editorView.getEditor().undo();
+        //break;
+      //case R.id.button_redo:
+        //editorView.getEditor().redo();
+        //break;
       case R.id.button_clear:
         editorView.getEditor().clear();
         break;
@@ -225,9 +225,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private void setInputMode(int inputMode)
   {
     editorView.setInputMode(inputMode);
-    findViewById(R.id.button_input_mode_forcePen).setEnabled(inputMode != InputController.INPUT_MODE_FORCE_PEN);
-    findViewById(R.id.button_input_mode_forceTouch).setEnabled(inputMode != InputController.INPUT_MODE_FORCE_TOUCH);
-    findViewById(R.id.button_input_mode_auto).setEnabled(inputMode != InputController.INPUT_MODE_AUTO);
+    //findViewById(R.id.button_input_mode_forcePen).setEnabled(inputMode != InputController.INPUT_MODE_FORCE_PEN);
+    //findViewById(R.id.button_input_mode_forceTouch).setEnabled(inputMode != InputController.INPUT_MODE_FORCE_TOUCH);
+    //findViewById(R.id.button_input_mode_auto).setEnabled(inputMode != InputController.INPUT_MODE_AUTO);
   }
 
   private void invalidateIconButtons()
@@ -240,10 +240,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       @Override
       public void run()
       {
-        ImageButton imageButtonUndo = (ImageButton) findViewById(R.id.button_undo);
-        imageButtonUndo.setEnabled(canUndo);
-        ImageButton imageButtonRedo = (ImageButton) findViewById(R.id.button_redo);
-        imageButtonRedo.setEnabled(canRedo);
+        //ImageButton imageButtonUndo = (ImageButton) findViewById(R.id.button_undo);
+        //imageButtonUndo.setEnabled(canUndo);
+        //ImageButton imageButtonRedo = (ImageButton) findViewById(R.id.button_redo);
+        //imageButtonRedo.setEnabled(canRedo);
         ImageButton imageButtonClear = (ImageButton) findViewById(R.id.button_clear);
         imageButtonClear.setEnabled(contentPart != null);
       }
