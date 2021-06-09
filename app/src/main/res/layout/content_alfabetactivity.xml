@@ -17,6 +17,6 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph"
-        tools:layout="@layout/fragment_game" />
+        tools:layout="@layout/fragment_second" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

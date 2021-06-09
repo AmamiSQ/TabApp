@@ -12,31 +12,33 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class GameActivity extends AppCompatActivity {
-
+public class alfabetactivity extends AppCompatActivity {
     int oldValue;
-    TextView scoreValue;
-    int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_game);
-
-        scoreValue = (TextView) findViewById(R.id.scoreValue);
-        Game();
-
+        setContentView(R.layout.fragment_second);
+        changeTextViewValueRandomlyOnButtonClick();
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        /*FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        }); */
     }
+    private void changeTextViewValueRandomlyOnButtonClick() {
+        final String[] manyDifferentStrings = {"Aa", "Bb", "Cc", "Dd", "Ee", "Ff", "Gg", "Hh",
+                "Ii", "Jj", "Kk", "Ll", "Mm", "Nn", "Oo", "Pp", "Qq", "Rr", "Ss", "Tt", "Uu",
+                "Vv", "Ww", "Xx", "Yy", "Zzz"};
 
-    private void Game() {
-        final String[] manyDifferentStrings = {"Hoi", "Dit was heel veel werk", "RIP", "Test"};
-
-
-        final TextView changingText = (TextView) findViewById(R.id.text_to_change);
-        Button changeTextButton = (Button) findViewById(R.id.change_text_button);
+        final TextView changingText = (TextView) findViewById(R.id.abc_text);
+        Button changeTextButton = (Button) findViewById(R.id.button_abc);
 
         changeTextButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,9 +49,6 @@ public class GameActivity extends AppCompatActivity {
                 }
                 changingText.setText(manyDifferentStrings[random]);
                 oldValue = random;
-
-                score++;
-                scoreValue.setText(Integer.toString(score));
             }
         });
     }

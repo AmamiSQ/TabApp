@@ -14,53 +14,170 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
+
+    private EditText eName;
+    private EditText ePassword;
+    private TextView eAttemptsInfo;
+    private Button eLogin;
+    private Button adminLogin;
+    private int counter = 5;
+
+    String userName = "1";
+    String userPassword = "1";
+
+    /* Class to hold credentials */
+    class Credentials
+    {
+        String name = "Admin";
+        String password = "123456";
+    }
+
+    boolean isValid = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        button = (Button) findViewById(R.id.button_game);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGameActivity();
-            }
-        });
-
-        button = (Button) findViewById(R.id.button_zinnenactivity);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openZinnenActivity();
-            }
-        });
-
+        setContentView(R.layout.fragment_first);
         Toolbar toolbar = findViewById(R.id.toolbar);
+        eName = findViewById(R.id.Username);
+        ePassword = findViewById(R.id.Password);
+        eAttemptsInfo = findViewById(R.id.Inlogkansen);
+        eLogin = findViewById(R.id.LoginButton);
+        adminLogin = findViewById(R.id.addAcountbutton);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        eLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*verander onderstaande code zodat het de accounts in de database checked */
+
+                /* Obtain user inputs */
+                userName = eName.getText().toString();
+                userPassword = ePassword.getText().toString();
+
+                /* Check if the user inputs are empty */
+                if(userName.isEmpty() || userPassword.isEmpty())
+                {
+                    /* Display a message toast to user to enter the details */
+                    Toast.makeText(MainActivity.this, "Vul alstublieft gebruiksnaam en wachtwoord in", Toast.LENGTH_LONG).show();
+
+                }else {
+
+                    /* Validate the user inputs */
+                    isValid = validate(userName, userPassword);
+
+                    /* Validate the user inputs */
+
+                    /* If not valid */
+                    if (!isValid) {
+
+                        /* Decrement the counter */
+                        counter--;
+
+                        /* Show the attempts remaining */
+                        eAttemptsInfo.setText("Over gebleven pogingen: " + String.valueOf(counter));
+
+                        /* Disable the login button if there are no attempts left */
+                        if (counter == 0) {
+                            eLogin.setEnabled(false);
+                            Toast.makeText(MainActivity.this, "U hebt al uw pogingen gebruikt probeer het later opnieuw", Toast.LENGTH_LONG).show();
+                        }
+                        /* Display error message */
+                        else {
+                            Toast.makeText(MainActivity.this, "Uw inlog gegevens zijn onjuist, probeer het alstublieft opnieuw", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    /* If valid */
+                    else {
+
+                        /*Allow the user in to your app by going into the next activity */
+                        startActivity(new Intent(MainActivity.this, mainmenuactivity.class));
+                    }
+
+                }
             }
         });
+
+        adminLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                /* Obtain user inputs */
+                userName = eName.getText().toString();
+                userPassword = ePassword.getText().toString();
+
+                /* Check if the user inputs are empty */
+                if(userName.isEmpty() || userPassword.isEmpty())
+                {
+                    /* Display a message toast to user to enter the details */
+                    Toast.makeText(MainActivity.this, "Vul alstublieft gebruiksnaam en wachtwoord in", Toast.LENGTH_LONG).show();
+
+                }else {
+
+                    /* Validate the user inputs */
+                    isValid = validate(userName, userPassword);
+
+                    /* Validate the user inputs */
+
+                    /* If not valid */
+                    if (!isValid) {
+
+                        /* Decrement the counter */
+                        counter--;
+
+                        /* Show the attempts remaining */
+                        eAttemptsInfo.setText("Over gebleven pogingen: " + String.valueOf(counter));
+
+                        /* Disable the login button if there are no attempts left */
+                        if (counter == 0) {
+                            eLogin.setEnabled(false);
+                            Toast.makeText(MainActivity.this, "U hebt al uw pogingen gebruikt probeer het later opnieuw", Toast.LENGTH_LONG).show();
+                        }
+                        /* Display error message */
+                        else {
+                            Toast.makeText(MainActivity.this, "Uw inlog gegevens zijn onjuist, probeer het alstublieft opnieuw", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    /* If valid */
+                    else {
+
+                        /*Allow the user in to your app by going into the next activity */
+                        startActivity(new Intent(MainActivity.this, database.class));
+                    }
+
+                }
+            }
+        });
+
     }
 
-    public void openGameActivity() {
-        Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
+    private boolean validate(String userName, String userPassword)
+    {
+        /* Get the object of Credentials class */
+        Credentials credentials = new Credentials();
+
+        /* Check the credentials */
+        if(userName.equals(credentials.name) && userPassword.equals(credentials.password))
+        {
+            return true;
+        }
+
+        return false;
     }
 
-    public void openZinnenActivity() {
-        Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -83,4 +200,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

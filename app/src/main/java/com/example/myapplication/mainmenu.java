@@ -1,4 +1,4 @@
-package com.example.myapplication;
+/*package com.example.myapplication;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-public class First2Fragment extends Fragment {
+public class mainmenu extends Fragment {
 
     @Override
     public View onCreateView(
@@ -26,30 +26,23 @@ public class First2Fragment extends Fragment {
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(First2Fragment.this)
-                        .navigate(R.id.action_First2Fragment_to_SecondFragment);
+                NavHostFragment.findNavController(mainmenu.this)
+                        .navigate(R.id.action_mainmenu_to_SecondFragment);
             }
         });
         view.findViewById(R.id.button).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                NavHostFragment.findNavController(First2Fragment.this)
-                        .navigate(R.id.action_First2Fragment_to_third);
+                NavHostFragment.findNavController(mainmenu.this)
+                        .navigate(R.id.action_mainmenu_to_third);
             }
         });
         view.findViewById(R.id.button_fourth).setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                NavHostFragment.findNavController(First2Fragment.this)
-                        .navigate(R.id.action_First2Fragment_to_woorden32);
-            }
-        });
-        view.findViewById(R.id.button_game).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                NavHostFragment.findNavController(First2Fragment.this)
-                        .navigate(R.id.action_First2Fragment_to_game);
+                NavHostFragment.findNavController(mainmenu.this)
+                        .navigate(R.id.action_mainmenu_to_woorden32);
             }
         });
     }
-}
+} */

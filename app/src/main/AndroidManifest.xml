@@ -9,6 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".Addactivity"
+            android:label="Add Account"
+            android:parentActivityName=".database"/>
+
+
+        <activity android:name=".database" />
+        <activity
+            android:name=".GameActivity"
+            android:label="@string/title_activity_game"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".woordenactivity"
+            android:label="@string/title_activity_woordenactivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".zinnenactivity"
+            android:label="@string/title_activity_zinnenactivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".alfabetactivity"
+            android:label="@string/title_activity_alfabetactivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+        <activity
+            android:name=".mainmenuactivity"
+            android:label="@string/title_activity_mainmenuactivity"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
             android:name=".ZinnenActivity"
             android:label="@string/title_activity_zinnen"
