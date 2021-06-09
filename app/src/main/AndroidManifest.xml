@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
+        <activity android:name=".Addactivity"
+            android:label="Add Account"
+            android:parentActivityName=".database"/>
+
+
+        <activity android:name=".database" />
         <activity
             android:name=".GameActivity"
             android:label="@string/title_activity_game"
-            android:theme="@style/Theme.MyApplication.NoActionBar"></activity>
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
         <activity
             android:name=".woordenactivity"
             android:label="@string/title_activity_woordenactivity"

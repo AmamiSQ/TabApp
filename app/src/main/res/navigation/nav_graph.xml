@@ -52,4 +52,14 @@
             android:id="@+id/action_First2Fragment_to_game"
             app:destination="@id/game" />
     </fragment>
+    <activity
+        android:id="@+id/database"
+        android:name="com.example.myapplication.database"
+        android:label="activity_database"
+        tools:layout="@layout/activity_database" />
+    <activity
+        android:id="@+id/addactivity"
+        android:name="com.example.myapplication.Addactivity"
+        android:label="activity_addactivity"
+        tools:layout="@layout/activity_addactivity" />
 </navigation>

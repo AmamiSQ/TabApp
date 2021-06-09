@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText ePassword;
     private TextView eAttemptsInfo;
     private Button eLogin;
+    private Button adminLogin;
     private int counter = 5;
 
     String userName = "1";
@@ -55,9 +56,62 @@ public class MainActivity extends AppCompatActivity {
         ePassword = findViewById(R.id.Password);
         eAttemptsInfo = findViewById(R.id.Inlogkansen);
         eLogin = findViewById(R.id.LoginButton);
+        adminLogin = findViewById(R.id.addAcountbutton);
         setSupportActionBar(toolbar);
 
         eLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*verander onderstaande code zodat het de accounts in de database checked */
+
+                /* Obtain user inputs */
+                userName = eName.getText().toString();
+                userPassword = ePassword.getText().toString();
+
+                /* Check if the user inputs are empty */
+                if(userName.isEmpty() || userPassword.isEmpty())
+                {
+                    /* Display a message toast to user to enter the details */
+                    Toast.makeText(MainActivity.this, "Vul alstublieft gebruiksnaam en wachtwoord in", Toast.LENGTH_LONG).show();
+
+                }else {
+
+                    /* Validate the user inputs */
+                    isValid = validate(userName, userPassword);
+
+                    /* Validate the user inputs */
+
+                    /* If not valid */
+                    if (!isValid) {
+
+                        /* Decrement the counter */
+                        counter--;
+
+                        /* Show the attempts remaining */
+                        eAttemptsInfo.setText("Over gebleven pogingen: " + String.valueOf(counter));
+
+                        /* Disable the login button if there are no attempts left */
+                        if (counter == 0) {
+                            eLogin.setEnabled(false);
+                            Toast.makeText(MainActivity.this, "U hebt al uw pogingen gebruikt probeer het later opnieuw", Toast.LENGTH_LONG).show();
+                        }
+                        /* Display error message */
+                        else {
+                            Toast.makeText(MainActivity.this, "Uw inlog gegevens zijn onjuist, probeer het alstublieft opnieuw", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    /* If valid */
+                    else {
+
+                        /*Allow the user in to your app by going into the next activity */
+                        startActivity(new Intent(MainActivity.this, mainmenuactivity.class));
+                    }
+
+                }
+            }
+        });
+
+        adminLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -101,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                     else {
 
                         /*Allow the user in to your app by going into the next activity */
-                        startActivity(new Intent(MainActivity.this, mainmenuactivity.class));
+                        startActivity(new Intent(MainActivity.this, database.class));
                     }
 
                 }
